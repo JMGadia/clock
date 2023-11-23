@@ -1,0 +1,51 @@
+body {
+  background-color: #111; /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff; /* Text color */
+  font-family: Arial, sans-serif;
+}
+
+.clock {
+  display: flex;
+  font-size: 4rem;
+}
+
+.flip-digit {
+  margin: 0 5px;
+}
+
+.flip-card {
+  width: 40px;
+  height: 60px;
+  perspective: 800px;
+  margin: 0 auto;
+}
+
+.flip-card .flip-top,
+.flip-card .flip-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Dark background for digits */
+  color: #fff; /* Text color for digits */
+  font-weight: bold;
+  font-size: 2rem;
+  transform-style: preserve-3d;
+}
+
+.flip-card .flip-bottom {
+  transform: rotateX(180deg);
+  transition: transform 0.5s;
+}
+
+.separator {
+  font-size: 3rem;
+  line-height: 60px;
+}
+
